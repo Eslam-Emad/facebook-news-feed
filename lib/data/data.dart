@@ -1,4 +1,4 @@
-import 'package:facebook_feed/models/models.dart';
+import '/models/models.dart';
 
 const UserModel currentUser = UserModel(
   name: 'Islam Emad',

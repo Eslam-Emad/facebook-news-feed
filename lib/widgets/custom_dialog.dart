@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:facebook_feed/constants/palette.dart';
+import '/constants/palette.dart';
 
 
 class CustomDialog extends StatelessWidget {

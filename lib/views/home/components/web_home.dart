@@ -1,5 +1,5 @@
-import 'package:facebook_feed/models/models.dart';
 import 'package:flutter/material.dart';
+import '/models/models.dart';
 import '/widgets/widgets.dart';
 import '/data/data.dart';
 

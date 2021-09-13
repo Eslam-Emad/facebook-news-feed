@@ -21,7 +21,7 @@ class _HomeState extends State<Home> {
   @override
   void initState() {
     bloc = BlocProvider.of<PostBloc>(context);
-    bloc.add(GatPostsEvent());
+    bloc.add(GetPostsEvent());
     super.initState();
   }
 

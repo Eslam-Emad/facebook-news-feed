@@ -6,7 +6,7 @@ import '/widgets/user_tile.dart';
 
 
 class OptionsList extends StatelessWidget {
-  final List<List> _moreOptionsList =  [
+  final List<List> _optionsList =  [
     [FontAwesomeIcons.userShield, Colors.deepPurple, 'COVID-19 Info Center'],
     [FontAwesomeIcons.users, Colors.cyan, 'Friends'],
     [FontAwesomeIcons.facebookMessenger, Palette.facebookBlue, 'Messenger'],
@@ -28,7 +28,7 @@ class OptionsList extends StatelessWidget {
     return Container(
       constraints: const BoxConstraints(maxWidth: 280.0),
       child: ListView.builder(
-        itemCount: 1 + _moreOptionsList.length,
+        itemCount: _optionsList.length + 1,
         itemBuilder: (BuildContext context, int index) {
           if (index == 0) {
             return Padding(
@@ -36,7 +36,7 @@ class OptionsList extends StatelessWidget {
               child: UserTile(user: user),
             );
           }
-          final List option = _moreOptionsList[index - 1];
+          final List option = _optionsList[index - 1];
           return Padding(
             padding: const EdgeInsets.symmetric(vertical: 8.0),
             child: _Option(

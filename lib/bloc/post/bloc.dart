@@ -1,7 +1,7 @@
-import 'package:facebook_feed/bloc/post/post_event.dart';
-import 'package:facebook_feed/bloc/post/post_states.dart';
-import 'package:facebook_feed/repository/repository.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import '/bloc/post/post_event.dart';
+import '/bloc/post/post_states.dart';
+import '/repository/repository.dart';
 
 class PostBloc extends Bloc<PostEvent, PostStates> {
   PostRepository repository;
@@ -10,7 +10,7 @@ class PostBloc extends Bloc<PostEvent, PostStates> {
 
   @override
   Stream<PostStates> mapEventToState(event) async* {
-    if (event is GatPostsEvent) {
+    if (event is GetPostsEvent) {
       yield LoadingState();
       try {
         var posts = await repository.getAll();

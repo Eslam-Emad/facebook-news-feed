@@ -1,7 +1,7 @@
 import 'dart:math';
 
-import 'package:facebook_feed/widgets/widgets.dart';
 import 'package:flutter/material.dart';
+import '/widgets/widgets.dart';
 
 class PhotoGrid extends StatefulWidget {
   final int maxImages;
@@ -62,15 +62,14 @@ class _PhotoGridState extends State<PhotoGrid> {
               widget.onImageClicked(index);
               showDialog(
                 context: context,
-                builder: (_) => CustomDialog(
-
-                  children:[ Expanded(
+                builder: (_) => CustomDialog(children: [
+                  Expanded(
                     child: Image.network(
                       imageUrl,
                       fit: BoxFit.contain,
                     ),
-                  ),]
-                ),
+                  ),
+                ]),
               );
             },
           );
@@ -106,15 +105,14 @@ class _PhotoGridState extends State<PhotoGrid> {
             widget.onImageClicked(index);
             showDialog(
               context: context,
-              builder: (_) => CustomDialog(
-
-                children: [Expanded(
+              builder: (_) => CustomDialog(children: [
+                Expanded(
                   child: Image.network(
                     imageUrl,
                     fit: BoxFit.contain,
                   ),
-                ),]
-              ),
+                ),
+              ]),
             );
           },
         );

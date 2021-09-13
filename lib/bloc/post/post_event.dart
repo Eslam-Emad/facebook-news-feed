@@ -5,4 +5,4 @@ class PostEvent extends Equatable {
   List<Object?> get props => [];
 }
 
-class GatPostsEvent extends PostEvent {}
+class GetPostsEvent extends PostEvent {}
